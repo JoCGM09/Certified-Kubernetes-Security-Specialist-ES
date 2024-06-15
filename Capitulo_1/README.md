@@ -10,4 +10,4 @@ En este capítulo se despliega un ambiente de 3 pods en el namespace "g04".
 
 Paso 1: En el cluster de Kubernetes, crear el archivo setup.yaml y copiar el contenido del archivo.
 
-Paso 2: En la terminal, ejecutar ´kubectl apply -f setup.yaml´.
+Paso 2: En la terminal, ejecutar `kubectl apply -f setup.yaml`.
