@@ -10,7 +10,11 @@ En este capítulo se despliega un ambiente de 3 pods en el namespace "g04".
 
 Paso 1: En el cluster de Kubernetes, crear el archivo setup.yaml y copiar el contenido del archivo.
 
-Paso 2: En la terminal, ejecutar `kubectl apply -f setup.yaml`
+Paso 2: En la terminal, ejecutar el comando: 
+
+```
+kubectl apply -f setup.yaml
+```
 
 Salida:
 
@@ -22,7 +26,13 @@ pod/frontend created
 pod/other created
 ```
 
-Paso 3: Verificar que los pods se ejecuten correctamente en el namespace, ejecutar `kubectl get pods -n g04 -o wide` para verificar las IPs virtuales creadas para los pods de frontend y backend.
+Paso 3: Verificar que los pods se ejecuten correctamente en el namespace, ejecutar el comando para verificar las IPs virtuales creadas para los pods de frontend y backend.
+
+```
+kubectl get pods -n g04 -o wide
+```
+
+Salida:
 
 ```
 root@controlplane:~$ kubectl get pods -n g04 -o wide
@@ -31,7 +41,11 @@ backend    1/1     Running   0          3m31s   10.244.1.6   node01   <none>    
 frontend   1/1     Running   0          3m31s   10.244.1.7   node01   <none>           <none>
 ```
 
-Paso 4: Verificar que el pod others se ejecute correctamente en el namespace default, ejecutar `kubectl get pods -n default`
+Paso 4: Verificar que el pod others se ejecute correctamente en el namespace default, ejecutar el comando: 
+
+```
+kubectl get pods -n default
+```
 
 ```
 root@controlplane:~$ kubectl get pods -n default
